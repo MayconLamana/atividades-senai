@@ -1,0 +1,52 @@
+Código em JAVA;
+//CÓDIGO DA ATIVIDADE EM JAVA
+
+import java.util.Scanner;
+
+public class MyClass {
+    public static void main(String args[]) {
+      int codigoDoCargo = 0;
+      double salarioAntigo = 0.0;
+      double novoSalario = 0.0 ;
+      double diferencaSalario = 0.0 ;
+      
+      Scanner salario = new Scanner(System.in);
+      System.out.printf("Digite seu salário atual R$ = ");
+      salarioAntigo = salario.nextDouble();
+      System.out.println(salarioAntigo);
+      
+      Scanner codigoCargo = new Scanner(System.in);
+      System.out.println("Escolha o código do seu cargo: 101, 102 ou 103, Caso o seu código não esteja presente na lista anterior não tem problema pode digitar o código do seu cargo que ele estará registrado no banco de dados");
+      System.out.printf(" Digite o código do seu cargo = ");
+      codigoDoCargo = codigoCargo.nextInt();
+      System.out.println(codigoDoCargo);
+       
+      switch(codigoDoCargo){
+            case 101:
+                novoSalario = salarioAntigo * 5/100 + salarioAntigo;
+                diferencaSalario = novoSalario - salarioAntigo;
+                System.out.println(" Seu salário era de R$ = " + salarioAntigo + "   "  +  " A partir de agora seu novo salário será de R$ = " + novoSalario + "  " + " A diferença de salário entre o antigo e o novo é de R$ " + diferencaSalario);
+            break;
+            case 102:
+                novoSalario = salarioAntigo * 7/100 + salarioAntigo;
+                diferencaSalario = novoSalario - salarioAntigo;
+                System.out.println(" Seu salário era de R$ = " + salarioAntigo + "   " +  " A partir de agora seu novo salário será de R$ = " + novoSalario + "  " + " A diferença de salário entre o antigo e o novo é de R$ " + diferencaSalario);
+            break;
+            case 103:
+                novoSalario = salarioAntigo * 10/100 + salarioAntigo;
+                diferencaSalario = novoSalario - salarioAntigo;
+                System.out.println(" Seu salário era de R$ = " + salarioAntigo + "   " +  " A partir de agora seu novo salário será de R$ = " + novoSalario + "  " + " A diferença de salário entre o antigo e o novo é de R$ " + diferencaSalario);
+            break;
+            default:
+                novoSalario = salarioAntigo * 15/100 + salarioAntigo;
+                diferencaSalario = novoSalario - salarioAntigo;
+                System.out.println(" Seu salário era de R$ = " + salarioAntigo + "   " +  " A partir de agora seu novo salário será de R$ = " + novoSalario + "  " + " A diferença de salário entre o antigo e o novo é de R$ " + diferencaSalario);
+          
+          
+      }
+       
+       
+    }
+}
+
+Fim do código em JAVA...
