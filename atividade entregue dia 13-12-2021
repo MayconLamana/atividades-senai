@@ -1,0 +1,216 @@
+Essa atividade tinha como objetivo o seguinte requsiito:
+  "Atividade - Situação de aprendizagem
+	Crie um pseudocódigo conforme solicitado no Portugol Studio, 
+	Crie o mesmo algoritmo em Java e Python.
+
+	Atividade prática
+
+		3 - Uma empresa concederá um aumento de salário aos seus funcionários,
+		variável de acordo com o cargo, conforme a tabela abaixo. Faça um
+		programa que leia o salário e o código do cargo de um funcionário e calcule
+		o seu novo salário. Se o cargo do funcionário não estiver na tabela, ele
+		deverá, então, receber 15% de aumento. Mostre o salário antigo, o novo
+		salário e a diferença entre ambos. Utilizar o comando “caso”.
+
+			Plano Aumento
+			101 	   5%
+			102     7%
+			103    10%
+
+
+E tinhamos como desafio criar esse código no Portugol Studio, em Python e em JAVA..
+
+  Então nesse caso, segue os códigos, cada um seguido por suas informações de qual linguagem tal código se refere...
+  
+  
+  Código em Portugol;
+// CÓDIGO DA ATIVIDADE NO PORTUGOL
+/*	Atividade - Situação de aprendizagem
+	Crie um pseudocódigo conforme solicitado no Portugol Studio, 
+	Crie o mesmo algoritmo em Java e Python.
+
+	Atividade prática
+
+		3 - Uma empresa concederá um aumento de salário aos seus funcionários,
+		variável de acordo com o cargo, conforme a tabela abaixo. Faça um
+		programa que leia o salário e o código do cargo de um funcionário e calcule
+		o seu novo salário. Se o cargo do funcionário não estiver na tabela, ele
+		deverá, então, receber 15% de aumento. Mostre o salário antigo, o novo
+		salário e a diferença entre ambos. Utilizar o comando “caso”.
+
+			Plano Aumento
+			101 	   5%
+			102     7%
+			103    10%
+
+			Passe as questões 3 para a linguagem Java e Python.*/
+
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro codigoDoCargo /* Essa Variavél se refere ao código do cargo do funcionário que nesse caso, cada codigo irá receber um aumento diferente, e todo aquele codigo que não constar aqui receberá aumento de 15%. */
+			  
+	     real salarioAntigo = 0.0, // Essa Variavél se refere ao salário do funcionário sem o aumento //
+		novoSalario = 0.0,   // Essa Variavél se refere ao novo salário do funcionário com o aumento//
+		diferencaSalario = 0.0 /*Essa Variavél terá a função de mostrar ao usuario a diferença entre o salário antigo e o salário novo do funcionário, e como pode observar lá em baixo 
+		(também deixarei um comentário, irei deixar um identificador #003) ela pega informações contidas em variavéis faz a subtração e informa a diferença, isso tudo sem colocar valores fixos, ela irá 
+		 peagr valores que estiverem contidos nas varíaveis = salario e novoSalario, e a partir disso fará a subtração, que funcionará da seguinte forma, "diferencaSalario = novoSalario - salarioAntigo" e com 
+		 isso retornará o valor da diferença em Reais que o funcionário passará a receberm devido ao aumento...*/
+
+		// Etapa onde o programa irá receber as informações //
+		escreva(" Digite por favor o seu salário atual R$ = ")
+		leia(salarioAntigo)
+
+		escreva(" Escolha o código do seu cargo: 101, 102 ou 103, Caso o seu código não esteja presente na lista anterior não tem problema pode digitar o código do seu cargo que ele estará registrado no banco de dados \n") /*Coloquei a expresasão banco de dados...
+		.. porém é apenas um aviso ao usuário para que caso ele não ache o código dele presente na lista, que ele pode digitar sem problemas que o sistema irá entender...*/
+		escreva(" Digite por favor o código do seu cargo = ")
+		leia(codigoDoCargo)
+		
+			// Onde ocorrerá as decisões e o processamento de acordo com as informações dadas acima.... //
+		escolha(codigoDoCargo){
+			caso 101:
+				novoSalario = salarioAntigo * 5/100 + salarioAntigo
+				
+			pare
+
+			caso 102:
+				novoSalario = salarioAntigo * 7/100 + salarioAntigo
+				
+			pare
+
+			caso 103:
+				novoSalario = salarioAntigo * 10/100 + salarioAntigo
+				
+			pare
+
+			caso contrario:
+					novoSalario = salarioAntigo * 15/100 + salarioAntigo 
+		
+			}  diferencaSalario = novoSalario - salarioAntigo  /* identificador da explicação = #003, a explicação dessa varíavel se encontra acima.... Junto com ela ocorre outro processamento dessa vez,
+			porém para poder informar a diferença do salário */
+			escreva(" Seu salário era de R$ = ", salarioAntigo , "   ",  " A partir de agora seu novo salário será de R$ = ", novoSalario, "  ", " A diferença de salário entre o antigo e o novo é de R$ ", diferencaSalario )
+			
+	}
+}
+
+
+fim do código em portugol..
+
+
+Código da atividade em Python;
+#CÓDIGO DA ATIVIDADE EM PYTHON
+   Atividade - Situação de aprendizagem
+	Crie um pseudocódigo conforme solicitado no Portugol Studio, 
+	Crie o mesmo algoritmo em Java e Python.
+
+	Atividade prática
+
+		3 - Uma empresa concederá um aumento de salário aos seus funcionários,
+		variável de acordo com o cargo, conforme a tabela abaixo. Faça um
+		programa que leia o salário e o código do cargo de um funcionário e calcule
+		o seu novo salário. Se o cargo do funcionário não estiver na tabela, ele
+		deverá, então, receber 15% de aumento. Mostre o salário antigo, o novo
+		salário e a diferença entre ambos. Utilizar o comando “caso”.
+
+			Plano Aumento
+			101 	   5%
+			102     7%
+			103    10%
+
+codigoDoCargo = 0;
+salarioAntigo = 0.0;
+novoSalario = 0.0;
+diferencaSalario = 0.0;
+
+salarioAntigo = ((float)(input("Digite seu salário atual por favor R$ = ")));
+
+print(" Escolha o código do seu cargo: 101, 102 ou 103, Caso o seu código não esteja presente na lista anterior não tem problema pode digitar o código do seu cargo que ele estará registrado no banco de dados ");
+codigoDoCargo = ((input)("Digite o código do seu cargo = "));
+print(codigoDoCargo)
+
+if (codigoDoCargo == '101'):
+    novoSalario = salarioAntigo * 5/100 + salarioAntigo;
+    diferencaSalario = novoSalario - salarioAntigo;
+    print(" Seu salário era de R$ = ", salarioAntigo , "   ",  " A partir de agora seu novo salário será de R$ = ", novoSalario, "  ", " A diferença de salário entre o antigo e o novo é de R$ ", diferencaSalario);
+    
+elif(codigoDoCargo == '102'):
+    novoSalario = salarioAntigo * 7/100 + salarioAntigo;
+    diferencaSalario = novoSalario - salarioAntigo;
+    print(" Seu salário era de R$ = ", salarioAntigo , "   ",  " A partir de agora seu novo salário será de R$ = ", novoSalario, "  ", " A diferença de salário entre o antigo e o novo é de R$ ", diferencaSalario);
+
+elif(codigoDoCargo == '103'):
+    novoSalario = salarioAntigo * 10/100 + salarioAntigo;
+    diferencaSalario = novoSalario - salarioAntigo;
+    print(" Seu salário era de R$ = ", salarioAntigo , "   ",  " A partir de agora seu novo salário será de R$ = ", novoSalario, "  ", " A diferença de salário entre o antigo e o novo é de R$ ", diferencaSalario);
+        
+else:
+    novoSalario = salarioAntigo * 15/100 + salarioAntigo
+    diferencaSalario = novoSalario - salarioAntigo;
+    print(" Seu salário era de R$ = ", salarioAntigo , "   ",  " A partir de agora seu novo salário será de R$ = ", novoSalario, "  ", " A diferença de salário entre o antigo e o novo é de R$ ", diferencaSalario);
+ 
+fim do código em python....
+
+
+
+
+Código em JAVA;
+//CÓDIGO DA ATIVIDADE EM JAVA
+
+import java.util.Scanner;
+
+public class MyClass {
+    public static void main(String args[]) {
+      int codigoDoCargo = 0;
+      double salarioAntigo = 0.0;
+      double novoSalario = 0.0 ;
+      double diferencaSalario = 0.0 ;
+      
+      Scanner salario = new Scanner(System.in);
+      System.out.printf("Digite seu salário atual R$ = ");
+      salarioAntigo = salario.nextDouble();
+      System.out.println(salarioAntigo);
+      
+      Scanner codigoCargo = new Scanner(System.in);
+      System.out.println("Escolha o código do seu cargo: 101, 102 ou 103, Caso o seu código não esteja presente na lista anterior não tem problema pode digitar o código do seu cargo que ele estará registrado no banco de dados");
+      System.out.printf(" Digite o código do seu cargo = ");
+      codigoDoCargo = codigoCargo.nextInt();
+      System.out.println(codigoDoCargo);
+       
+      switch(codigoDoCargo){
+            case 101:
+                novoSalario = salarioAntigo * 5/100 + salarioAntigo;
+                diferencaSalario = novoSalario - salarioAntigo;
+                System.out.println(" Seu salário era de R$ = " + salarioAntigo + "   "  +  " A partir de agora seu novo salário será de R$ = " + novoSalario + "  " + " A diferença de salário entre o antigo e o novo é de R$ " + diferencaSalario);
+            break;
+            case 102:
+                novoSalario = salarioAntigo * 7/100 + salarioAntigo;
+                diferencaSalario = novoSalario - salarioAntigo;
+                System.out.println(" Seu salário era de R$ = " + salarioAntigo + "   " +  " A partir de agora seu novo salário será de R$ = " + novoSalario + "  " + " A diferença de salário entre o antigo e o novo é de R$ " + diferencaSalario);
+            break;
+            case 103:
+                novoSalario = salarioAntigo * 10/100 + salarioAntigo;
+                diferencaSalario = novoSalario - salarioAntigo;
+                System.out.println(" Seu salário era de R$ = " + salarioAntigo + "   " +  " A partir de agora seu novo salário será de R$ = " + novoSalario + "  " + " A diferença de salário entre o antigo e o novo é de R$ " + diferencaSalario);
+            break;
+            default:
+                novoSalario = salarioAntigo * 15/100 + salarioAntigo;
+                diferencaSalario = novoSalario - salarioAntigo;
+                System.out.println(" Seu salário era de R$ = " + salarioAntigo + "   " +  " A partir de agora seu novo salário será de R$ = " + novoSalario + "  " + " A diferença de salário entre o antigo e o novo é de R$ " + diferencaSalario);
+          
+          
+      }
+       
+       
+    }
+}
+
+Fim do código em JAVA...
+
+
+E assim ficou o meu código tanto no Portugol Studio (1º código), em Python (2º Código) e em JAVA (3º código)...
+
+
+
+
