@@ -1,0 +1,53 @@
+Código da atividade em Python;
+#CÓDIGO DA ATIVIDADE EM PYTHON
+   Atividade - Situação de aprendizagem
+	Crie um pseudocódigo conforme solicitado no Portugol Studio, 
+	Crie o mesmo algoritmo em Java e Python.
+
+	Atividade prática
+
+		3 - Uma empresa concederá um aumento de salário aos seus funcionários,
+		variável de acordo com o cargo, conforme a tabela abaixo. Faça um
+		programa que leia o salário e o código do cargo de um funcionário e calcule
+		o seu novo salário. Se o cargo do funcionário não estiver na tabela, ele
+		deverá, então, receber 15% de aumento. Mostre o salário antigo, o novo
+		salário e a diferença entre ambos. Utilizar o comando “caso”.
+
+			Plano Aumento
+			101 	   5%
+			102     7%
+			103    10%
+
+codigoDoCargo = 0;
+salarioAntigo = 0.0;
+novoSalario = 0.0;
+diferencaSalario = 0.0;
+
+salarioAntigo = ((float)(input("Digite seu salário atual por favor R$ = ")));
+
+print(" Escolha o código do seu cargo: 101, 102 ou 103, Caso o seu código não esteja presente na lista anterior não tem problema pode digitar o código do seu cargo que ele estará registrado no banco de dados ");
+codigoDoCargo = ((input)("Digite o código do seu cargo = "));
+print(codigoDoCargo)
+
+if (codigoDoCargo == '101'):
+    novoSalario = salarioAntigo * 5/100 + salarioAntigo;
+    diferencaSalario = novoSalario - salarioAntigo;
+    print(" Seu salário era de R$ = ", salarioAntigo , "   ",  " A partir de agora seu novo salário será de R$ = ", novoSalario, "  ", " A diferença de salário entre o antigo e o novo é de R$ ", diferencaSalario);
+    
+elif(codigoDoCargo == '102'):
+    novoSalario = salarioAntigo * 7/100 + salarioAntigo;
+    diferencaSalario = novoSalario - salarioAntigo;
+    print(" Seu salário era de R$ = ", salarioAntigo , "   ",  " A partir de agora seu novo salário será de R$ = ", novoSalario, "  ", " A diferença de salário entre o antigo e o novo é de R$ ", diferencaSalario);
+
+elif(codigoDoCargo == '103'):
+    novoSalario = salarioAntigo * 10/100 + salarioAntigo;
+    diferencaSalario = novoSalario - salarioAntigo;
+    print(" Seu salário era de R$ = ", salarioAntigo , "   ",  " A partir de agora seu novo salário será de R$ = ", novoSalario, "  ", " A diferença de salário entre o antigo e o novo é de R$ ", diferencaSalario);
+        
+else:
+    novoSalario = salarioAntigo * 15/100 + salarioAntigo
+    diferencaSalario = novoSalario - salarioAntigo;
+    print(" Seu salário era de R$ = ", salarioAntigo , "   ",  " A partir de agora seu novo salário será de R$ = ", novoSalario, "  ", " A diferença de salário entre o antigo e o novo é de R$ ", diferencaSalario);
+ 
+fim do código em python....
+
